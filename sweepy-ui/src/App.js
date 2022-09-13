@@ -6,9 +6,9 @@ import React, { useState } from "react";
 function App() {
   const [shortUrl, setShortUrl] = useState([]);
 
-  const addShortUrl = (shortUrl) => {
+  const addShortUrl = (shortUrl, longUrl) => {
     setShortUrl((prev) => {
-      return [...prev, { url: shortUrl, id: Math.random().toString() }];
+      return [...prev, { shortUrl: shortUrl, longUrl: longUrl, id: Math.random().toString() }];
     });
   };
   return (

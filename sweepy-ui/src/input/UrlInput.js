@@ -22,7 +22,7 @@ const UrlInput = (props) => {
       }
     )
     .then(response => {
-      props.onShorten(response.data);
+      props.onShorten(response.data, longUrl);
       console.log(response.data);
     })
     .catch(error => {
