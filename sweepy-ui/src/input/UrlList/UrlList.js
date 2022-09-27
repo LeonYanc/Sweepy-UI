@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./UrlList.module.css";
-import button from "./Button.module.css";
+
 
 const UrlList = (props) => {
   return (
@@ -10,8 +10,8 @@ const UrlList = (props) => {
         {props.url.map((url) => (
           <li key={url.id}>
             <h2>
-              {url.longUrl} has been shortened to{" "}
-              <a
+              {url.longUrl}{" "}
+              <a 
                 href={"http://localhost:8000/goto?url=" + url.shortUrl}
                 target="_blank"
               >
@@ -19,14 +19,14 @@ const UrlList = (props) => {
               </a>
             </h2>
             <button
-              className={button.button}
+              className={classes.button}
               onClick={() =>
                 navigator.clipboard.writeText(
                   "http://localhost:8000/goto?url=" + url.shortUrl
                 )
               }
             >
-              Copy shortUrl
+              Copy
             </button>
           </li>
         ))}

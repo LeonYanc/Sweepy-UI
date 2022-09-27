@@ -7,6 +7,20 @@
   cursor: pointer;
 }
 
+.logout {
+  font: inherit;
+  border: 1px solid #4f005f;
+  background: #4f005f;
+  color: white;
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  margin-top: 1px;
+  margin-right: 2px;
+  position:absolute;
+  top:0;
+  right:0;
+}
+
 .button:hover,
 .button:active {
   background: #741188;
